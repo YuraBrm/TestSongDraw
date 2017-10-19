@@ -15,6 +15,11 @@ public class main {
 		
 		BufferedImage bim = new BufferedImage(x, y, BufferedImage.TYPE_INT_ARGB);
 		
+		Graphics2D g2d = bim.createGraphics();
+		
+		g2d.setColor(new Color(Integer.parseInt( "FFFFFF", 16 ) ) );
+		g2d.fillRect(0, 0, x, y); //background
+		
 		try {
 		    File outputfile = new File("test.png");
 		    ImageIO.write(bim, "png", outputfile);
@@ -24,4 +29,3 @@ public class main {
 		}
 	}
 }
-	
